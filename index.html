@@ -12,13 +12,8 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module">
-      const elementProps = {
-        className: "greeting",
-        children: "Hello React JS world!",
-      };
-      const elementTag = "h1";
-      const element = React.createElement(elementTag, elementProps);
+    <script type="text/babel">
+      const element = <h1 className="greeting"> Hello world!!</h1>;
       ReactDOM.render(element, document.getElementById("root"));
     </script>
   </body>
