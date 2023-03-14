@@ -13,8 +13,29 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      const element = <h1 className="greeting"> Hello world!!</h1>;
-      ReactDOM.render(element, document.getElementById("root"));
+      const elementType = "h1";
+      const elementProps = {
+        className: "greeting",
+        children: "Hello world",
+      };
+      const element1 = React.createElement(elementType, elementProps);
+
+      const className = "greeting";
+      const name = "Manasa patel";
+      const element = <h1 className={className}> Hellooooo {name} </h1>;
+
+      const fullName = (user) => user.firstName + " " + user.lastName;
+      const user = { firstName: "Manaaasa", lastName: "Patel" };
+      const element2 = <h1 className="greeting">Hiii {fullName(user)}!!</h1>;
+      ReactDOM.render(element2, document.getElementById("root"));
+
+      const element3 = (
+        <div>
+          <h1 className="greeting"> Heyyyyy</h1>
+          <p>Good to see you </p>
+        </div>
+      );
+      ReactDOM.render(element3, document.getElementById("root"));
     </script>
   </body>
 </html>
